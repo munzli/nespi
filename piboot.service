@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python /opt/scripts/piboot.py
+WorkingDirectory=/opt/scripts/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=piboot
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
